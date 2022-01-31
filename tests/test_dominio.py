@@ -9,9 +9,9 @@ class TestLeilao(TestCase):
     # e já é chamado automaticamente sem precisar chamar
     # nas outras classes
     def setUp(self):
-        self.gui = Usuario('Gui')
-        self.yuri = Usuario('Yuri')
-        self.kadu = Usuario('Kadu')
+        self.gui = Usuario('Gui', 500.0)
+        self.yuri = Usuario('Yuri', 500.0)
+        self.kadu = Usuario('Kadu', 500.0)
 
         self.lance1 = Lance(self.gui, 110.0)
         self.lance2 = Lance(self.yuri, 150.0)
@@ -60,7 +60,7 @@ class TestLeilao(TestCase):
 
     # se o ultimo usuario for difernete, deve permitir propor o lance
     def test_deve_permitir_um_lance_caso_o_ultimo_usuario_seja_diferente(self):
-        cadu = Usuario('Cadu')
+        cadu = Usuario('Cadu', 500.0)
         lance4 = Lance(cadu, 250.0)
 
         self.leilao.propoe(self.lance1)

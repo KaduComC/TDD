@@ -6,6 +6,12 @@ class Usuario:
         self.__nome = nome
         self.__carteira = carteira
 
+    def propoe_lance(self, leilao, valor):
+        lance = Lance(self, valor)
+        leilao.propoe(lance)
+        
+        self.__carteira -= valor
+
     # acessa o nome
     @property
     def nome(self):
@@ -14,7 +20,6 @@ class Usuario:
     @property
     def carteira(self):
         return self.__carteira
-
 
 class Lance:
 
