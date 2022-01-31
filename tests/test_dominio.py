@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from dominio import Lance, Usuario, Leilao
+from src.dominio import Lance, Usuario, Leilao
 
 
 class TestLeilao(TestCase):

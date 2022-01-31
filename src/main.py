@@ -1,4 +1,4 @@
-from dominio import Avaliador, Usuario, Lance, Leilao
+from src.dominio import Avaliador, Usuario, Lance, Leilao
 
 gui = Usuario('Gui')
 yuri = Usuario('Yuri')
